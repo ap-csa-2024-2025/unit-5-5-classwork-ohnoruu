@@ -19,4 +19,12 @@ public class Point2D
     public void setY(int inputY){
         y = inputY;
     }
+
+    public String toString(){
+        return ("A point at (" + x + ", " + y + ").");
+    }
+
+    public boolean equals(Point2D other){
+        return (x==other.x) && (y==other.y);
+    }
 }

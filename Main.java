@@ -6,7 +6,11 @@ public class Main
   {
     // Create objects and test your classes in here
     Scanner sc = new Scanner(System.in);
+    /*
+    //Classwork: 
+
     Point2D p1 = new Point2D();
+    Point2D p2 = new Point2D();
     System.out.println("Give me two numbers:");
     int in_x = sc.nextInt();
     int in_y = sc.nextInt();
@@ -15,7 +19,11 @@ public class Main
     p1.setX(in_x);
     p1.setY(in_y);
 
-    System.out.println("You made a point at ("+p1.getX()+", "+p1.getY()+")");
+    p2.setX(1);
+    p2.setY(2);
+
+    System.out.println(p1.toString());
+    System.out.println(p1.equals(p2));
     sc.nextLine();
 
     Dog d1 = new Dog();
@@ -34,5 +42,16 @@ public class Main
     d1.setFurColor(in_furColor);
 
     System.out.println("Your dog: \n" + d1.getName() + "\n" + d1.getBreed() + "\n" + d1.getSize() + "\n" + d1.getFurColor());
+    */
+    Person p = new Person();
+    System.out.println("Enter the person's first name: ");
+    input_firstN = sc.nextLine();
+    System.out.println("Enter the person's last name: ");
+    input_lastN = sc.nextLine();
+    System.out.println("Enter the person's age: ");
+    input_age = sc.nextInt();
+    System.out.println("Enter the person's social security number: ");
+    input_SSN = sc.nextInt();
+   
   }
 }
