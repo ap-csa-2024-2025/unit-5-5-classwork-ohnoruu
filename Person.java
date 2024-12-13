@@ -5,16 +5,16 @@ public class Person
     private int age;
     private int SSN;
 
-    public void setFirstName(in_firstN){
+    public void setFirstName(String in_firstN){
         firstName = in_firstN;
     }
-    public void setLastName(in_lastN){
+    public void setLastName(String in_lastN){
         lastName = in_lastN;
     }
-    public void setAge(in_age){
+    public void setAge(int in_age){
         age = in_age;
     }
-    public void setSSN(in_SSN){
+    public void setSSN(int in_SSN){
         SSN = in_SSN;
     }
 
@@ -32,8 +32,8 @@ public class Person
     }
 
     public String toString(){
-        String output = SSN;
-        output += "\tName: " + firstName + " " + lastName + "\nAge: " + age;
+        String output = "SSN: " + Integer.toString(SSN);
+        output += "\n\tName: " + firstName + " " + lastName + "\n\tAge: " + age + "\n";
         return output;
     }
 }

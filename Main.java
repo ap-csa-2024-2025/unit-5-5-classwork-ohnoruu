@@ -43,15 +43,41 @@ public class Main
 
     System.out.println("Your dog: \n" + d1.getName() + "\n" + d1.getBreed() + "\n" + d1.getSize() + "\n" + d1.getFurColor());
     */
+
+   //Problem 1
     Person p = new Person();
     System.out.println("Enter the person's first name: ");
-    input_firstN = sc.nextLine();
+    p.setFirstName(sc.nextLine());
     System.out.println("Enter the person's last name: ");
-    input_lastN = sc.nextLine();
+    p.setLastName(sc.nextLine());
     System.out.println("Enter the person's age: ");
-    input_age = sc.nextInt();
+    p.setAge(sc.nextInt());
+    sc.nextLine();
     System.out.println("Enter the person's social security number: ");
-    input_SSN = sc.nextInt();
-   
+    p.setSSN(sc.nextInt());
+    sc.nextLine();
+    System.out.println(p.toString());
+
+    //Problem 2
+    String input="";
+    Oven o = new Oven();
+    System.out.println("Maximum oven temperature: ");
+    o.setMaxTemp(sc.nextInt());
+    sc.nextLine();
+    System.out.println("Starting oven temperature: ");
+    o.setCurrentTemp(sc.nextInt());
+    sc.nextLine();
+    System.out.println(o.toString());
+    while (!(input.equals('q'))){
+      System.out.println("To preheat the oven enter \"p\", to turn the oven off enter \"o\", to restart enter \"r\", to quit enter \"q\"");
+      input = sc.nextLine();
+      if (input.equals('p')){
+        System.out.println("Enter the temperature to preheat the oven to: ");
+        o.preheat(sc.nextInt());
+      }
+      if (input.equals('o')){
+        o.turnOff();
+      }
+    }
   }
 }
