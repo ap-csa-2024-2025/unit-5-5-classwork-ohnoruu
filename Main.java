@@ -68,14 +68,15 @@ public class Main
     o.setCurrentTemp(sc.nextInt());
     sc.nextLine();
     System.out.println(o.toString());
-    while (!(input.equals('q'))){
+    while (!(input.equals("q"))){
       System.out.println("To preheat the oven enter \"p\", to turn the oven off enter \"o\", to restart enter \"r\", to quit enter \"q\"");
       input = sc.nextLine();
-      if (input.equals('p')){
+      if (input.equals("p")){
         System.out.println("Enter the temperature to preheat the oven to: ");
         o.preheat(sc.nextInt());
+        sc.nextLine();
       }
-      if (input.equals('o')){
+      if (input.equals("o")){
         o.turnOff();
       }
     }
